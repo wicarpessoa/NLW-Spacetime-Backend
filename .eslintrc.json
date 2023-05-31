@@ -8,7 +8,8 @@
             {
               "endOfLine": "auto"
             }
-          ]
+          ],
+          "camelcase" : "off"
     }
     
 }
