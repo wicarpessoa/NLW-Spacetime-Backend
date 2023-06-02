@@ -7,10 +7,7 @@ export async function authRoutes(app: FastifyInstance) {
     const bodySchema = z.object({
       code: z.string(),
     });
-    console.log(request.body);
     const { code } = bodySchema.parse(request.body);
-    console.log(code);
-    console.log(process.env.GITHUB_CLIENT_ID, process.env.GITHUB_CLIENT_SECRET);
     const acessTokenResponse = await axios.post(
       "https://github.com/login/oauth/access_token",
       null,
